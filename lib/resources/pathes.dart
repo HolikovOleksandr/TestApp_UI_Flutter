@@ -13,3 +13,7 @@ class AppIcons {
   static const String shop = 'assets/icons/shop.svg';
   static const String time = 'assets/icons/time.svg';
 }
+
+class AppImages {
+  static const String notFound = 'assets/images/travolta.png';
+}

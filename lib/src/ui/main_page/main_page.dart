@@ -8,6 +8,7 @@ class MainPage extends BaseStatelessWidget {
   Widget getLayout(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.blue,
+      body: Center(),
     );
   }
 }
