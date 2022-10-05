@@ -12,8 +12,16 @@ class AppColor {
   static const Color pink = Color(0xFFCC0074);
   static const Color ornage = Color(0xFFFF4D17);
   static const Color purple = Color(0xFF8B00D0);
-  static const List<Color> backgroundGradient = [
+  static const Color shadowColor = Color(0x3E000000);
+
+  static const List<Color> bgGradient = [
     Color(0xFF002D97),
     Color(0xFF1D59F3),
   ];
+
+  static const shadow = BoxShadow(
+    color: AppColor.shadowColor,
+    blurRadius: 3,
+    offset: Offset(1, 1),
+  );
 }
