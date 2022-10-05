@@ -12,4 +12,8 @@ class AppColor {
   static const Color pink = Color(0xFFCC0074);
   static const Color ornage = Color(0xFFFF4D17);
   static const Color purple = Color(0xFF8B00D0);
+  static const List<Color> backgroundGradient = [
+    Color(0xFF002D97),
+    Color(0xFF1D59F3),
+  ];
 }

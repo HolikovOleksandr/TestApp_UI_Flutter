@@ -14,3 +14,5 @@ final unknownRoute = GetPage(
   name: AppRouter.unknown,
   page: () => const UnknownPage(),
 );
+
+ const String rootRoute = AppRouter.mainPage;

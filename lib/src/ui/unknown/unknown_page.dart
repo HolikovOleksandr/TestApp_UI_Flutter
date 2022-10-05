@@ -28,8 +28,8 @@ class UnknownPage extends BaseStatelessWidget {
             Image.asset(AppImages.notFound, scale: 1.2),
             const SizedBox(height: 16),
             Text(
-              'Пардон, мы не нашли такую страницу(',
-              style: AppFonts.size18SemiBold.copyWith(
+              'Пардон, мы не нашли такую страницу('.toUpperCase(),
+              style: AppFonts.size14Bold.copyWith(
                 color: AppColor.white,
               ),
             ),
