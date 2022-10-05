@@ -26,10 +26,10 @@ class LittleBlueCircleButton extends StatelessWidget {
       children: [
         Container(
           width: Get.size.width * 0.11,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: AppColor.blue,
-            boxShadow: [AppColor.shadow],
+            boxShadow: [AppColor.littleBlueButtonShadow],
           ),
           child: InkWell(
             onTap: onTab,
