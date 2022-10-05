@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/pathes.dart';
 import 'package:test_exercise/src/core/base_widgets/base_statless_widget.dart';
-import 'package:test_exercise/src/ui/widgets/buttons/little_blue_circle_button.dart';
+import 'package:test_exercise/src/ui/widgets/little_blue_circle_button.dart';
 
 class MainPage extends BaseStatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -27,13 +27,10 @@ class MainPage extends BaseStatelessWidget {
                 icon: AppIcons.info,
                 onTab: () {},
               ),
-            ], 
+            ],
           ),
         ),
       ),
     );
   }
 }
-
-
-
