@@ -1,8 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:test_exercise/resources/colors.dart';
-import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
-import 'package:test_exercise/src/core/base_widgets/base_statefull_widget.dart';
 import 'package:test_exercise/src/core/base_widgets/base_statless_widget.dart';
 
 class GlassMorhismContainer extends BaseStatelessWidget {

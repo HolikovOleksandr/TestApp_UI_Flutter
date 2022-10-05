@@ -12,7 +12,8 @@ class AppColor {
   static const Color pink = Color(0xFFCC0074);
   static const Color ornage = Color(0xFFFF4D17);
   static const Color purple = Color(0xFF8B00D0);
-  static const Color black = Color.fromARGB(255, 0, 0, 0);
+  static const Color black = Color(0xFF000000);
+  static const Color blue2 = Color(0xFF4778EB);
 
   static const List<Color> bgGradient = [
     Color(0xFF002D97),
