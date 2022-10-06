@@ -4,10 +4,10 @@ import 'package:test_exercise/resources/fonts.dart';
 import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/pathes.dart';
 import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
+import 'package:test_exercise/src/ui/pages/product_description/product_description_page.dart';
 import 'package:test_exercise/src/ui/widgets/product_card.dart';
 import 'package:test_exercise/src/core/controllers/product_controller.dart';
 import 'package:test_exercise/src/core/base_widgets/base_statless_widget.dart';
-import 'package:test_exercise/src/ui/product_description/product_description_page.dart';
 
 class MyBottomSheet extends BaseStatelessWidget {
   final ProductController productController = Get.put(ProductController());

@@ -4,8 +4,8 @@ import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/fonts.dart';
 import 'package:test_exercise/src/core/models/product_model.dart';
 import 'package:test_exercise/src/core/base_widgets/base_statless_widget.dart';
-import 'package:test_exercise/src/ui/product_description/components/wendor_card.dart';
-import 'package:test_exercise/src/ui/product_description/components/recomentation_list_builder.dart';
+import 'package:test_exercise/src/ui/pages/product_description/components/wendor_card.dart';
+import 'package:test_exercise/src/ui/pages/product_description/components/recomentation_list_builder.dart';
 
 class ProductDescriptionPage extends BaseStatelessWidget {
   final ProductModel product;

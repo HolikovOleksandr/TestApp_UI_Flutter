@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test_exercise/resources/colors.dart';
-import 'package:test_exercise/src/ui/home/components/bank_card.dart';
-import 'package:test_exercise/src/ui/home/components/bottom_sheet.dart';
-import 'package:test_exercise/src/ui/home/components/categories.dart';
+import 'package:test_exercise/src/ui/pages/home/components/bank_card.dart';
+import 'package:test_exercise/src/ui/pages/home/components/categories.dart';
+import 'package:test_exercise/src/ui/pages/home/components/bottom_sheet.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

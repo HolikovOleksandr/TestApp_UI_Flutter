@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:test_exercise/router/route_pathes.dart';
 import 'package:test_exercise/src/ui/main_page.dart';
-import 'package:test_exercise/src/ui/unknown/unknown_page.dart';
+import 'package:test_exercise/router/route_pathes.dart';
+import 'package:test_exercise/src/ui/pages/unknown/unknown_page.dart';
 
 final routes = [
   GetPage(
@@ -15,4 +15,4 @@ final unknownRoute = GetPage(
   page: () => const UnknownPage(),
 );
 
- const String rootRoute = AppRouter.mainPage;
+const String rootRoute = AppRouter.mainPage;
