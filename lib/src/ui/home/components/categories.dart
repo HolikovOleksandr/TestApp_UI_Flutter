@@ -42,7 +42,7 @@ class CategoriesListView extends StatelessWidget {
                                 width: 56,
                                 height: 56,
                                 decoration: BoxDecoration(
-                                  // TODO: shadow shine
+                                  //TODO: shadow shine
                                   color: Colors.transparent,
                                   border: Border.all(
                                     color: categoryList[index].color,
@@ -57,6 +57,7 @@ class CategoriesListView extends StatelessWidget {
                             ],
                           ),
                           Text(
+                            //TODO: Wrap text
                             categoryList[index].text,
                             maxLines: 2,
                             softWrap: true,

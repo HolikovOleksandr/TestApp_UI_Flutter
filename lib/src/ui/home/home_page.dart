@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/src/ui/home/components/categories.dart';
 import 'package:test_exercise/src/ui/home/components/circle_progress_and_buttons.dart';
-import 'package:test_exercise/src/ui/widgets/product_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,11 +19,9 @@ class HomePage extends StatelessWidget {
           ),
         ),
         child: Column(
-          children:  [
-            const CashbackBalanseRow(),
-            const CategoriesListView(),
-            ProductCardWidget( ),
-            
+          children: const [
+            CashbackBalanseRow(),
+            CategoriesListView(),
           ],
         ),
       ),
