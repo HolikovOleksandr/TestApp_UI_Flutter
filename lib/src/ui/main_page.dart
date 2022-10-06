@@ -24,7 +24,7 @@ class _MainPageState extends State<MainPage> {
 
   // PAGES TO NAVIGATE TO
   final List<Widget> _pages = [
-    const HomePage(),
+    HomePage(),
     Center(
       child: Text(
         'ИСТОРИЯ',
@@ -55,81 +55,100 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_selectedIndex],
-      bottomNavigationBar: Stack(
-        alignment: Alignment.topCenter,
-        children: [
-          BottomNavigationBar(
-            selectedItemColor: AppColor.primary,
-            unselectedItemColor: AppColor.white.withOpacity(0.5),
-            type: BottomNavigationBarType.fixed,
-            backgroundColor: AppColor.navBarBg,
-            currentIndex: _selectedIndex,
-            onTap: _navigateBottomBar,
-            items: [
-              BottomNavigationBarItem(
-                activeIcon: SvgPicture.asset(
-                  AppIcons.home,
-                  color: AppColor.primary,
-                ),
-                icon: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SvgPicture.asset(
-                    AppIcons.home,
-                    color: AppColor.white.withOpacity(0.5),
-                  ),
-                ),
-                label: 'Главная',
-              ),
-              BottomNavigationBarItem(
-                activeIcon:
-                    SvgPicture.asset(AppIcons.time, color: AppColor.primary),
-                icon: SvgPicture.asset(
-                  AppIcons.time,
-                  color: AppColor.white.withOpacity(0.5),
-                ),
-                label: 'История',
-              ),
-              BottomNavigationBarItem(
-                icon: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SvgPicture.asset(AppIcons.qrCode,
-                      color: Colors.transparent),
-                ),
-                label: 'QR-code',
-              ),
-              BottomNavigationBarItem(
-                icon: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SvgPicture.asset(
-                    AppIcons.location,
-                    color: AppColor.white.withOpacity(0.5),
-                  ),
-                ),
-                label: 'Карта',
-              ),
-              BottomNavigationBarItem(
-                icon: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SvgPicture.asset(
-                    AppIcons.more,
-                    color: AppColor.white.withOpacity(0.5),
-                  ),
-                ),
-                label: 'Еще',
-              ),
-            ],
-          ),
-          Positioned(
-            bottom: 50,
-            child: FloatingActionButton(
-              backgroundColor: AppColor.blue,
-              onPressed: () {},
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: AppColor.primary,
+        unselectedItemColor: AppColor.white.withOpacity(0.5),
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: AppColor.navBarBg,
+        currentIndex: _selectedIndex,
+        onTap: _navigateBottomBar,
+        items: [
+          //
+          BottomNavigationBarItem(
+            activeIcon: Padding(
+              padding: const EdgeInsets.all(4.0),
               child: SvgPicture.asset(
-                AppIcons.qrCode,
-                color: Colors.white,
+                AppIcons.home,
+                color: AppColor.primary,
               ),
             ),
-          )
+            icon: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SvgPicture.asset(
+                AppIcons.home,
+                color: AppColor.white.withOpacity(0.5),
+              ),
+            ),
+            label: 'Главная',
+          ),
+          BottomNavigationBarItem(
+            activeIcon: Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: SvgPicture.asset(
+                AppIcons.time,
+                color: AppColor.primary,
+              ),
+            ),
+            icon: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SvgPicture.asset(
+                AppIcons.time,
+                color: AppColor.white.withOpacity(0.5),
+              ),
+            ),
+            label: 'История',
+          ),
+          BottomNavigationBarItem(
+            activeIcon: Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: SvgPicture.asset(
+                AppIcons.qrCode,
+                color: AppColor.primary,
+              ),
+            ),
+            icon: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SvgPicture.asset(
+                AppIcons.qrCode,
+                color: AppColor.white.withOpacity(0.5),
+              ),
+            ),
+            label: 'QR-code',
+          ),
+          BottomNavigationBarItem(
+            activeIcon: Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: SvgPicture.asset(
+                AppIcons.location,
+                color: AppColor.primary,
+              ),
+            ),
+            icon: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SvgPicture.asset(
+                AppIcons.location,
+                color: AppColor.white.withOpacity(0.5),
+              ),
+            ),
+            label: 'Карта',
+          ),
+          BottomNavigationBarItem(
+            activeIcon: Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: SvgPicture.asset(
+                AppIcons.more,
+                color: AppColor.primary,
+              ),
+            ),
+            icon: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SvgPicture.asset(
+                AppIcons.more,
+                color: AppColor.white.withOpacity(0.5),
+              ),
+            ),
+            label: 'Еще',
+          ),
         ],
       ),
     );

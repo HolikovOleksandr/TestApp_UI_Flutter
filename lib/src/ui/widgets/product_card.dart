@@ -24,6 +24,7 @@ class ProductCardWidget extends BaseStatelessWidget {
             width: double.infinity,
             height: 80,
             decoration: BoxDecoration(
+              boxShadow: [AppColor.productCardShadow],
               color: AppColor.white,
               borderRadius: BorderRadius.circular(16),
             ),
@@ -95,8 +96,8 @@ class ProductCardWidget extends BaseStatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-                    height: 40,
-                    width: 62,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: const BoxDecoration(
                       color: AppColor.yellow,
                       borderRadius: BorderRadius.horizontal(

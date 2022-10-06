@@ -20,4 +20,6 @@ class AppImages {
   static const String latte = 'assets/images/latte.png';
   static const String aroma = 'assets/images/wendor_image.png';
   static const String americano = 'assets/images/americano.png';
+  static const String cheep = 'assets/images/cheep.png';
+  static const String visa = 'assets/images/visa.png';
 }

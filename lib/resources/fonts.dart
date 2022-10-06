@@ -16,6 +16,13 @@ class AppFonts {
     ),
   );
 
+  static final size24Bold = GoogleFonts.openSans(
+    textStyle: const TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 24,
+    ),
+  );
+
   static final size24Regular = GoogleFonts.openSans(
     textStyle: const TextStyle(
       fontWeight: FontWeight.w400,
@@ -23,10 +30,24 @@ class AppFonts {
     ),
   );
 
+  static final size18Bold = GoogleFonts.openSans(
+    textStyle: const TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 18,
+    ),
+  );
+
   static final size18SemiBold = GoogleFonts.openSans(
     textStyle: const TextStyle(
       fontWeight: FontWeight.w600,
       fontSize: 18,
+    ),
+  );
+
+  static final size16Bold = GoogleFonts.openSans(
+    textStyle: const TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 16,
     ),
   );
 

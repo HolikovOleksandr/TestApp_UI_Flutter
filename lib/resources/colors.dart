@@ -26,6 +26,12 @@ class AppColor {
     offset: const Offset(1, 1),
   );
 
+  static var productCardShadow = BoxShadow(
+    color: AppColor.black.withOpacity(0.20),
+    blurRadius: 8,
+    offset: const Offset(2, 2),
+  );
+
   static var circleProgressBarShadow = BoxShadow(
     color: AppColor.black.withOpacity(0.25),
     blurRadius: 4,
