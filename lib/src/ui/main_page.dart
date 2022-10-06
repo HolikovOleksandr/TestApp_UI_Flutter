@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/fonts.dart';
+import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/pathes.dart';
-import 'package:test_exercise/src/ui/home_page/home_page.dart';
+import 'package:test_exercise/src/ui/home/home_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -15,6 +15,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   // NAVIGATE AROUNT THE BOTTOM NAV BAR
   int _selectedIndex = 0;
+
   void _navigateBottomBar(int index) {
     setState(() {
       _selectedIndex = index;
@@ -54,47 +55,81 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: AppColor.navBarBg,
-        currentIndex: _selectedIndex,
-        onTap: _navigateBottomBar,
-        items: [
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SvgPicture.asset(AppIcons.home,),
-            ),
-            label: 'Главная',
+      bottomNavigationBar: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          BottomNavigationBar(
+            selectedItemColor: AppColor.primary,
+            unselectedItemColor: AppColor.white.withOpacity(0.5),
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: AppColor.navBarBg,
+            currentIndex: _selectedIndex,
+            onTap: _navigateBottomBar,
+            items: [
+              BottomNavigationBarItem(
+                activeIcon: SvgPicture.asset(
+                  AppIcons.home,
+                  color: AppColor.primary,
+                ),
+                icon: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SvgPicture.asset(
+                    AppIcons.home,
+                    color: AppColor.white.withOpacity(0.5),
+                  ),
+                ),
+                label: 'Главная',
+              ),
+              BottomNavigationBarItem(
+                activeIcon:
+                    SvgPicture.asset(AppIcons.time, color: AppColor.primary),
+                icon: SvgPicture.asset(
+                  AppIcons.time,
+                  color: AppColor.white.withOpacity(0.5),
+                ),
+                label: 'История',
+              ),
+              BottomNavigationBarItem(
+                icon: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SvgPicture.asset(AppIcons.qrCode,
+                      color: Colors.transparent),
+                ),
+                label: 'QR-code',
+              ),
+              BottomNavigationBarItem(
+                icon: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SvgPicture.asset(
+                    AppIcons.location,
+                    color: AppColor.white.withOpacity(0.5),
+                  ),
+                ),
+                label: 'Карта',
+              ),
+              BottomNavigationBarItem(
+                icon: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SvgPicture.asset(
+                    AppIcons.more,
+                    color: AppColor.white.withOpacity(0.5),
+                  ),
+                ),
+                label: 'Еще',
+              ),
+            ],
           ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SvgPicture.asset(AppIcons.time),
+          Positioned(
+            bottom: 50,
+            child: FloatingActionButton(
+              backgroundColor: AppColor.blue,
+              onPressed: () {},
+              child: SvgPicture.asset(
+                AppIcons.qrCode,
+                color: Colors.white,
+              ),
             ),
-            label: 'История',
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SvgPicture.asset(AppIcons.qrCode),
-            ),
-            label: 'QR-code',
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SvgPicture.asset(AppIcons.location),
-            ),
-            label: 'Карта',
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SvgPicture.asset(AppIcons.more),
-            ),
-            label: 'Еще',
-          ),
+          )
         ],
       ),
     );

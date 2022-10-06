@@ -31,7 +31,6 @@ class CategoriesListView extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8),
                     child: SizedBox(
-                      
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -43,6 +42,7 @@ class CategoriesListView extends StatelessWidget {
                                 width: 56,
                                 height: 56,
                                 decoration: BoxDecoration(
+                                  // TODO: shadow shine
                                   color: Colors.transparent,
                                   border: Border.all(
                                     color: categoryList[index].color,
