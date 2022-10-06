@@ -60,29 +60,11 @@ class ProductCardWidget extends BaseStatelessWidget {
                         ),
                         Expanded(
                           flex: 1,
-                          child: Row(
-                            children: [
-                              Text(
-                                'Цена: ',
-                                style: AppFonts.size12SemiBold.copyWith(
-                                  color: AppColor.textBlack,
-                                ),
-                              ),
-
-                              // PRICE
-                              Text(
-                                currentProduct.price,
-                                style: AppFonts.size12SemiBold.copyWith(
-                                  color: AppColor.textBlack,
-                                ),
-                              ),
-                              Text(
-                                '₴',
-                                style: AppFonts.size12SemiBold.copyWith(
-                                  color: AppColor.textBlack,
-                                ),
-                              ),
-                            ],
+                          child: Text(
+                            'Цена: ${currentProduct.price} \$',
+                            style: AppFonts.size12SemiBold.copyWith(
+                              color: AppColor.textBlack,
+                            ),
                           ),
                         ),
                         Expanded(
