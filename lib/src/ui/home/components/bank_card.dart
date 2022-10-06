@@ -13,7 +13,7 @@ class BankCardWidget extends BaseStatelessWidget {
   Widget getLayout(BuildContext context) {
     // return GlassMorhismContainer();
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.all(16),
       child: AspectRatio(
         aspectRatio: 5 / 3,
         child: GlassMorhismContainer(
@@ -78,7 +78,7 @@ class BankCardWidget extends BaseStatelessWidget {
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          'Holikov Oleksander'.toUpperCase(),
+                          'Holikov Oleksandr'.toUpperCase(),
                           style: AppFonts.size16Bold.copyWith(
                             color: AppColor.white,
                           ),

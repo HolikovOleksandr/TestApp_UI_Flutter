@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:flutter/services.dart';
 import 'package:test_exercise/src/core/models/product_model.dart';
 
 class ProductController extends GetxController {
@@ -10,7 +10,7 @@ class ProductController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-
+    
     fetchData();
   }
 

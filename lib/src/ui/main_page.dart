@@ -4,6 +4,7 @@ import 'package:test_exercise/resources/fonts.dart';
 import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/pathes.dart';
 import 'package:test_exercise/src/ui/home/home_page.dart';
+import 'package:test_exercise/src/ui/unknown/unknown_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -23,32 +24,12 @@ class _MainPageState extends State<MainPage> {
   }
 
   // PAGES TO NAVIGATE TO
-  final List<Widget> _pages = [
+  final List<Widget> _pages = const [
     HomePage(),
-    Center(
-      child: Text(
-        'ИСТОРИЯ',
-        style: AppFonts.size36Bold.copyWith(color: AppColor.subtext),
-      ),
-    ),
-    Center(
-      child: Text(
-        'QR-code',
-        style: AppFonts.size36Bold.copyWith(color: AppColor.subtext),
-      ),
-    ),
-    Center(
-      child: Text(
-        'КАРТА',
-        style: AppFonts.size36Bold.copyWith(color: AppColor.subtext),
-      ),
-    ),
-    Center(
-      child: Text(
-        'ЕЩЁ',
-        style: AppFonts.size36Bold.copyWith(color: AppColor.subtext),
-      ),
-    ),
+    UnknownPage(),
+    UnknownPage(),
+    UnknownPage(),
+    UnknownPage(),
   ];
 
   @override

@@ -1,21 +1,19 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/fonts.dart';
+import 'package:test_exercise/src/core/models/product_model.dart';
 import 'package:test_exercise/src/core/base_widgets/base_statless_widget.dart';
-import 'package:test_exercise/src/ui/product_description/components/recomentation_list_builder.dart';
 import 'package:test_exercise/src/ui/product_description/components/wendor_card.dart';
+import 'package:test_exercise/src/ui/product_description/components/recomentation_list_builder.dart';
 
 class ProductDescriptionPage extends BaseStatelessWidget {
-  // final ProductModel product;
+  final ProductModel product;
 
-  const ProductDescriptionPage(
-      {
-      // required this.product,
-      Key? key})
-      : super(key: key);
+  const ProductDescriptionPage({
+    required this.product,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget getLayout(BuildContext context) {
@@ -44,7 +42,7 @@ class ProductDescriptionPage extends BaseStatelessWidget {
                   child: Stack(
                     children: [
                       Image.asset(
-                        'assets/images/latte.png',
+                        product.image,
                         width: double.infinity,
                         scale: .2,
                       ),
@@ -69,14 +67,14 @@ class ProductDescriptionPage extends BaseStatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Айс Латте',
+                            product.name,
                             style: AppFonts.size24Regular.copyWith(
                               color: AppColor.white,
                             ),
                           ),
                           const SizedBox(height: 3),
                           Text(
-                            'цена: 35 ₴'.toLowerCase(),
+                            'цена: ${product.price} ₴'.toLowerCase(),
                             style: AppFonts.size16Regular.copyWith(
                               color: AppColor.white,
                             ),
@@ -87,9 +85,14 @@ class ProductDescriptionPage extends BaseStatelessWidget {
                     ],
                   ),
                 ),
-                // INFO CONTAINER ABOUT WENDER
-                WenderCard(),
-                RecomendationList()
+                // WENDER CONTAINER
+                WenderCard(
+                  wendorName: product.store,
+                  typeIcon: product.categoryIcon,
+                  wendorImage: product.wendorImage,
+                  wendorType: product.wendorCategory,
+                ),
+                const RecomendationList()
               ],
             ),
           ),

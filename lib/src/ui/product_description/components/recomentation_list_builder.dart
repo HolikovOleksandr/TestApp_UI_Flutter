@@ -25,12 +25,40 @@ List<RecomendationModel> recomendations = [
     price: "50",
     image: AppImages.americano,
   ),
+  RecomendationModel(
+    cashback: "10",
+    name: "Ice Американо",
+    price: "50",
+    image: AppImages.americano,
+  ),
+  RecomendationModel(
+    cashback: "10",
+    name: "Ice Американо",
+    price: "50",
+    image: AppImages.americano,
+  ),
+  RecomendationModel(
+    cashback: "10",
+    name: "Ice Американо",
+    price: "50",
+    image: AppImages.americano,
+  ),
+  RecomendationModel(
+    cashback: "10",
+    name: "Ice Американо",
+    price: "50",
+    image: AppImages.americano,
+  ),
+  RecomendationModel(
+    cashback: "10",
+    name: "Ice Американо",
+    price: "50",
+    image: AppImages.americano,
+  ),
 ];
 
 class RecomendationList extends StatelessWidget {
-  const RecomendationList({
-    Key? key,
-  }) : super(key: key);
+  const RecomendationList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

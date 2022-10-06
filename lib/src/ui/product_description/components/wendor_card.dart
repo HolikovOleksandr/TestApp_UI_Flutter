@@ -3,16 +3,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/fonts.dart';
-import 'package:test_exercise/resources/pathes.dart';
 import 'package:test_exercise/src/ui/widgets/glasmorphism_container.dart';
+import 'package:test_exercise/src/core/base_widgets/base_statless_widget.dart';
 
-class WenderCard extends StatelessWidget {
+class WenderCard extends BaseStatelessWidget {
+  final String wendorImage;
+  final String wendorName;
+  final String wendorType;
+  final String typeIcon;
+
   const WenderCard({
+    required this.wendorImage,
+    required this.wendorName,
+    required this.wendorType,
+    required this.typeIcon,
     Key? key,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return GlassMorhismContainer(
       width: double.infinity,
       height: Get.height * 0.15,
@@ -28,7 +37,7 @@ class WenderCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
               // IMAGE
               child: Image.asset(
-                'assets/images/wendor_image.png',
+                wendorImage,
                 scale: 0.35,
               ),
             ),
@@ -39,7 +48,7 @@ class WenderCard extends StatelessWidget {
               children: [
                 Text(
                   // WEBDER NAME
-                  "Арома Кава",
+                  wendorName,
                   style: AppFonts.size18SemiBold.copyWith(
                     color: AppColor.white,
                   ),
@@ -49,10 +58,10 @@ class WenderCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SvgPicture.asset(AppIcons.cup),
+                    SvgPicture.asset(typeIcon),
                     const SizedBox(width: 8),
                     Text(
-                      'Кафе и Рестораны',
+                      wendorType,
                       softWrap: true,
                       style: AppFonts.size14Regular.copyWith(
                         color: AppColor.subtext,

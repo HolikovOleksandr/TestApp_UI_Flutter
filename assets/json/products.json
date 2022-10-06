@@ -1,11 +1,57 @@
-[{
-"id": "1",
-"price": "35",
-"name": "Latte",
-"cashback": "10",
-"store": "Арома кава",
-"image": "assets/images/latte.png", 
-"wendorCategory": "Кафе и Рестораны",
-"categoryIcon": "assets/icons/cup.svg",
-"wendorImage": "assets/images/wendor_image.png"
-}]
+[
+    {
+        "id": "1",
+        "price": "35",
+        "name": "Latte",
+        "cashback": "10",
+        "store": "Арома кава",
+        "image": "assets/images/latte.png", 
+        "wendorCategory": "Кафе и Рестораны",
+        "categoryIcon": "assets/icons/cup.svg",
+        "wendorImage": "assets/images/wendor_image.png"
+    },
+    {
+        "id": "1",
+        "price": "35",
+        "name": "Latte",
+        "cashback": "10",
+        "store": "Арома кава",
+        "image": "assets/images/latte.png", 
+        "wendorCategory": "Кафе и Рестораны",
+        "categoryIcon": "assets/icons/cup.svg",
+        "wendorImage": "assets/images/wendor_image.png"
+    },
+    {
+        "id": "1",
+        "price": "35",
+        "name": "Latte",
+        "cashback": "10",
+        "store": "Арома кава",
+        "image": "assets/images/latte.png", 
+        "wendorCategory": "Кафе и Рестораны",
+        "categoryIcon": "assets/icons/cup.svg",
+        "wendorImage": "assets/images/wendor_image.png"
+    },
+    {
+        "id": "1",
+        "price": "35",
+        "name": "Latte",
+        "cashback": "10",
+        "store": "Арома кава",
+        "image": "assets/images/latte.png", 
+        "wendorCategory": "Кафе и Рестораны",
+        "categoryIcon": "assets/icons/cup.svg",
+        "wendorImage": "assets/images/wendor_image.png"
+    },
+    {
+        "id": "1",
+        "price": "35",
+        "name": "Latte",
+        "cashback": "10",
+        "store": "Арома кава",
+        "image": "assets/images/latte.png", 
+        "wendorCategory": "Кафе и Рестораны",
+        "categoryIcon": "assets/icons/cup.svg",
+        "wendorImage": "assets/images/wendor_image.png"
+    }
+]

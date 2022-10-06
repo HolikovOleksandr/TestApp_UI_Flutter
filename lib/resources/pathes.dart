@@ -16,6 +16,7 @@ class AppIcons {
 }
 
 class AppImages {
+  static const String fire = 'assets/images/fire.png';
   static const String notFound = 'assets/images/travolta.png';
   static const String latte = 'assets/images/latte.png';
   static const String aroma = 'assets/images/wendor_image.png';
