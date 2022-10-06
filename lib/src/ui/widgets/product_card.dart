@@ -123,24 +123,11 @@ class ProductCardWidget extends BaseStatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            // CASHBAK
-                            Text(
-                              currentProduct.cashback,
-                              style: AppFonts.size14Bold.copyWith(
-                                color: AppColor.white,
-                              ),
-                            ),
-                            Text(
-                              '%',
-                              style: AppFonts.size12Bold.copyWith(
-                                color: AppColor.white,
-                              ),
-                            ),
-                          ],
+                        Text(
+                          '${currentProduct.cashback} %',
+                          style: AppFonts.size14Bold.copyWith(
+                            color: AppColor.white,
+                          ),
                         ),
                         Text(
                           "кэшбэк",

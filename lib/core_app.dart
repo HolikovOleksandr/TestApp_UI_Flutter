@@ -13,7 +13,7 @@ class CoreApp extends BaseStatelessWidget {
       debugShowCheckedModeBanner: false,
       unknownRoute: unknownRoute,
       // initialRoute: rootRoute,
-      home: ProductDescriptionPage(),
+      home: const ProductDescriptionPage(),
       navigatorKey: Get.key,
       getPages: routes,
     );

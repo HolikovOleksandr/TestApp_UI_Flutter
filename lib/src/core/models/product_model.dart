@@ -8,6 +8,9 @@ class ProductModel {
   final String image;
   final String store;
   final String wendorImage;
+  final String wendorCategory;
+  final String categoryIcon;
+
   ProductModel({
     required this.id,
     required this.name,
@@ -16,6 +19,8 @@ class ProductModel {
     required this.image,
     required this.store,
     required this.wendorImage,
+    required this.wendorCategory,
+    required this.categoryIcon,
   });
 
   ProductModel copyWith({
@@ -26,6 +31,8 @@ class ProductModel {
     String? image,
     String? store,
     String? wendorImage,
+    String? wendorCategory,
+    String? categoryIcon,
   }) {
     return ProductModel(
       id: id ?? this.id,
@@ -35,12 +42,14 @@ class ProductModel {
       image: image ?? this.image,
       store: store ?? this.store,
       wendorImage: wendorImage ?? this.wendorImage,
+      wendorCategory: wendorCategory ?? this.wendorCategory,
+      categoryIcon: categoryIcon ?? this.categoryIcon,
     );
   }
 
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
-  
+
     result.addAll({'id': id});
     result.addAll({'name': name});
     result.addAll({'price': price});
@@ -48,7 +57,9 @@ class ProductModel {
     result.addAll({'image': image});
     result.addAll({'store': store});
     result.addAll({'wendorImage': wendorImage});
-  
+    result.addAll({'wendorCategory': wendorCategory});
+    result.addAll({'categoryIcon': categoryIcon});
+
     return result;
   }
 
@@ -61,40 +72,47 @@ class ProductModel {
       image: map['image'] ?? '',
       store: map['store'] ?? '',
       wendorImage: map['wendorImage'] ?? '',
+      wendorCategory: map['wendorCategory'] ?? '',
+      categoryIcon: map['categoryIcon'] ?? '',
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory ProductModel.fromJson(String source) => ProductModel.fromMap(json.decode(source));
+  factory ProductModel.fromJson(String source) =>
+      ProductModel.fromMap(json.decode(source));
 
   @override
   String toString() {
-    return 'ProductModel(id: $id, name: $name, price: $price, cashback: $cashback, image: $image, store: $store, wendorImage: $wendorImage)';
+    return 'ProductModel(id: $id, name: $name, price: $price, cashback: $cashback, image: $image, store: $store, wendorImage: $wendorImage, wendorCategory: $wendorCategory, categoryIcon: $categoryIcon)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
+
     return other is ProductModel &&
-      other.id == id &&
-      other.name == name &&
-      other.price == price &&
-      other.cashback == cashback &&
-      other.image == image &&
-      other.store == store &&
-      other.wendorImage == wendorImage;
+        other.id == id &&
+        other.name == name &&
+        other.price == price &&
+        other.cashback == cashback &&
+        other.image == image &&
+        other.store == store &&
+        other.wendorImage == wendorImage &&
+        other.wendorCategory == wendorCategory &&
+        other.categoryIcon == categoryIcon;
   }
 
   @override
   int get hashCode {
     return id.hashCode ^
-      name.hashCode ^
-      price.hashCode ^
-      cashback.hashCode ^
-      image.hashCode ^
-      store.hashCode ^
-      wendorImage.hashCode;
+        name.hashCode ^
+        price.hashCode ^
+        cashback.hashCode ^
+        image.hashCode ^
+        store.hashCode ^
+        wendorImage.hashCode ^
+        wendorCategory.hashCode ^
+        categoryIcon.hashCode;
   }
 }

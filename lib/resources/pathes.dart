@@ -12,8 +12,12 @@ class AppIcons {
   static const String qrCode = 'assets/icons/qr_code.svg';
   static const String shop = 'assets/icons/shop.svg';
   static const String time = 'assets/icons/time.svg';
+  static const String cup = 'assets/icons/cup.svg';
 }
 
 class AppImages {
   static const String notFound = 'assets/images/travolta.png';
+  static const String latte = 'assets/images/latte.png';
+  static const String aroma = 'assets/images/wendor_image.png';
+  static const String americano = 'assets/images/americano.png';
 }
