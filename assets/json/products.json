@@ -1,8 +1,9 @@
 [{
 "id": "1",
-"name": "Latte",
 "price": "35",
+"name": "Latte",
 "cashback": "10",
+"store": "AromaKava",
 "image": "assets/images/latte.png", 
-"store": "AromaKava"
+"wendorImage": "assets/images/wendor_image.png"
 }]

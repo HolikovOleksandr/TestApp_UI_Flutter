@@ -7,7 +7,7 @@ class ProductModel {
   final String cashback;
   final String image;
   final String store;
-  
+  final String wendorImage;
   ProductModel({
     required this.id,
     required this.name,
@@ -15,6 +15,7 @@ class ProductModel {
     required this.cashback,
     required this.image,
     required this.store,
+    required this.wendorImage,
   });
 
   ProductModel copyWith({
@@ -24,6 +25,7 @@ class ProductModel {
     String? cashback,
     String? image,
     String? store,
+    String? wendorImage,
   }) {
     return ProductModel(
       id: id ?? this.id,
@@ -32,6 +34,7 @@ class ProductModel {
       cashback: cashback ?? this.cashback,
       image: image ?? this.image,
       store: store ?? this.store,
+      wendorImage: wendorImage ?? this.wendorImage,
     );
   }
 
@@ -44,6 +47,7 @@ class ProductModel {
     result.addAll({'cashback': cashback});
     result.addAll({'image': image});
     result.addAll({'store': store});
+    result.addAll({'wendorImage': wendorImage});
   
     return result;
   }
@@ -56,6 +60,7 @@ class ProductModel {
       cashback: map['cashback'] ?? '',
       image: map['image'] ?? '',
       store: map['store'] ?? '',
+      wendorImage: map['wendorImage'] ?? '',
     );
   }
 
@@ -65,7 +70,7 @@ class ProductModel {
 
   @override
   String toString() {
-    return 'ProductModel(id: $id, name: $name, price: $price, cashback: $cashback, image: $image, store: $store)';
+    return 'ProductModel(id: $id, name: $name, price: $price, cashback: $cashback, image: $image, store: $store, wendorImage: $wendorImage)';
   }
 
   @override
@@ -78,7 +83,8 @@ class ProductModel {
       other.price == price &&
       other.cashback == cashback &&
       other.image == image &&
-      other.store == store;
+      other.store == store &&
+      other.wendorImage == wendorImage;
   }
 
   @override
@@ -88,6 +94,7 @@ class ProductModel {
       price.hashCode ^
       cashback.hashCode ^
       image.hashCode ^
-      store.hashCode;
+      store.hashCode ^
+      wendorImage.hashCode;
   }
 }
