@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'dart:math';
+import 'package:flutter/material.dart';
 import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/fonts.dart';
 import 'package:test_exercise/resources/pathes.dart';
@@ -14,85 +14,82 @@ class BankCardWidget extends BaseStatelessWidget {
     // return GlassMorhismContainer();
     return Padding(
       padding: const EdgeInsets.all(16),
-      child: AspectRatio(
-        aspectRatio: 5 / 3,
-        child: GlassMorhismContainer(
-          angelRadius: 20,
-          width: double.infinity,
-          height: double.infinity,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Credit Card',
-                      style: AppFonts.size16Bold.copyWith(
-                        color: AppColor.white,
-                      ),
+      child: GlassMorhismContainer(
+        angelRadius: 20,
+        height: 164,
+        width: 320,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Credit Card',
+                    style: AppFonts.size16Bold.copyWith(
+                      color: AppColor.white,
                     ),
-                    Transform.rotate(
-                      angle: pi / 2,
-                      child: const Icon(
-                        Icons.wifi,
-                        color: AppColor.white,
-                        size: 35,
-                      ),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 24),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "1234  5678  9101  1123",
-                      style: AppFonts.size24Bold.copyWith(
-                        color: AppColor.white,
-                      ),
+                  ),
+                  Transform.rotate(
+                    angle: pi / 2,
+                    child: const Icon(
+                      Icons.wifi,
+                      color: AppColor.white,
+                      size: 35,
                     ),
-                    Image.asset(
-                      AppImages.cheep,
-                      width: 60,
-                      scale: 10,
+                  )
+                ],
+              ),
+              const SizedBox(height: 24),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "1234  5678  9101  1123",
+                    style: AppFonts.size24Bold.copyWith(
+                      color: AppColor.white,
                     ),
-                  ],
-                ),
-                const Spacer(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'card holder'.toLowerCase(),
-                          style: AppFonts.size14Regular.copyWith(
-                            color: AppColor.white.withOpacity(.7),
-                          ),
+                  ),
+                  Image.asset(
+                    AppImages.cheep,
+                    width: 60,
+                    scale: 10,
+                  ),
+                ],
+              ),
+              const Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'card holder'.toLowerCase(),
+                        style: AppFonts.size14Regular.copyWith(
+                          color: AppColor.white.withOpacity(.7),
                         ),
-                        const SizedBox(height: 8),
-                        Text(
-                          'Holikov Oleksandr'.toUpperCase(),
-                          style: AppFonts.size16Bold.copyWith(
-                            color: AppColor.white,
-                          ),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        'Holikov Oleksandr'.toUpperCase(),
+                        style: AppFonts.size16Bold.copyWith(
+                          color: AppColor.white,
                         ),
-                      ],
-                    ),
-                    Image.asset(
-                      AppImages.visa,
-                      scale: 10,
-                    )
-                  ],
-                ),
-              ],
-            ),
+                      ),
+                    ],
+                  ),
+                  Image.asset(
+                    AppImages.visa,
+                    scale: 10,
+                  )
+                ],
+              ),
+            ],
           ),
         ),
       ),

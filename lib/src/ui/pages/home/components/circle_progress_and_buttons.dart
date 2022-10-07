@@ -12,32 +12,29 @@ class CashbackBalanseRow extends BaseStatelessWidget {
   Widget getLayout(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16),
-      child: AspectRatio(
-        aspectRatio: 5 / 3,
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              width: 90,
-              child: LittleBlueCircleButton(
-                subTitle: 'Партнеры',
-                icon: AppIcons.shop,
-                onTab: () {},
-              ),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SizedBox(
+            width: 90,
+            child: LittleBlueCircleButton(
+              subTitle: 'Партнеры',
+              icon: AppIcons.shop,
+              onTab: () {},
             ),
-            const CircularProgressBar(),
-            SizedBox(
-              width: 90,
-              child: LittleBlueCircleButton(
-                subTitle: 'Информация',
-                icon: AppIcons.info,
-                onTab: () {},
-              ),
+          ),
+          const CircularProgressBar(),
+          SizedBox(
+            width: 90,
+            child: LittleBlueCircleButton(
+              subTitle: 'Информация',
+              icon: AppIcons.info,
+              onTab: () {},
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

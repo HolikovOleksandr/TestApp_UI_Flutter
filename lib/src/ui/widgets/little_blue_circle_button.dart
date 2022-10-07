@@ -26,15 +26,16 @@ class LittleBlueCircleButton extends StatelessWidget {
       children: [
         Container(
           width: Get.size.width * 0.11,
+          height: Get.size.width * 0.2,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: AppColor.blue,
             boxShadow: [AppColor.littleBlueButtonShadow],
           ),
-          child: InkWell(
-            onTap: onTab,
-            child: Padding(
-              padding: const EdgeInsets.all(8),
+          child: Padding(
+            padding: const EdgeInsets.all(8),
+            child: GestureDetector(
+              onTap: onTab,
               child: SvgPicture.asset(icon),
             ),
           ),

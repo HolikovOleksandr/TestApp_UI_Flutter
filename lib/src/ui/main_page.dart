@@ -43,7 +43,6 @@ class _MainPageState extends State<MainPage> {
         currentIndex: _selectedIndex,
         onTap: _navigateBottomBar,
         items: [
-          //
           BottomNavigationBarItem(
             activeIcon: Padding(
               padding: const EdgeInsets.all(4.0),
