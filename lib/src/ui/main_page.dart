@@ -4,8 +4,9 @@ import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/pathes.dart';
 import 'package:test_exercise/src/ui/pages/home/home_page.dart';
 import 'package:test_exercise/src/ui/pages/unknown/unknown_page.dart';
+import 'package:test_exercise/src/core/base_widgets/base_statefull_widget.dart';
 
-class MainPage extends StatefulWidget {
+class MainPage extends BaseStatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
   @override

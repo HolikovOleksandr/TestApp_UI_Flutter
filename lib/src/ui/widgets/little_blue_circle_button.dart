@@ -4,8 +4,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:test_exercise/resources/fonts.dart';
 import 'package:test_exercise/resources/colors.dart';
 import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
+import 'package:test_exercise/src/core/base_widgets/base_statless_widget.dart';
 
-class LittleBlueCircleButton extends StatelessWidget {
+class LittleBlueCircleButton extends BaseStatelessWidget {
   final String icon;
   final Callback onTab;
   final String subTitle;
@@ -18,7 +19,7 @@ class LittleBlueCircleButton extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.start,
@@ -40,13 +41,10 @@ class LittleBlueCircleButton extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 8),
-          child: Text(
-            subTitle,
-            style: AppFonts.size10Regular.copyWith(
-              color: AppColor.white,
-            ),
+        Text(
+          subTitle,
+          style: AppFonts.size10Regular.copyWith(
+            color: AppColor.white,
           ),
         ),
       ],

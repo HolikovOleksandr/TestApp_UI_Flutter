@@ -3,6 +3,7 @@ import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/fonts.dart';
 import 'package:test_exercise/resources/pathes.dart';
 import 'package:test_exercise/src/ui/widgets/glasmorphism_container.dart';
+import 'package:test_exercise/src/core/base_widgets/base_statless_widget.dart';
 
 class RecomendationModel {
   String price;
@@ -57,11 +58,11 @@ List<RecomendationModel> recomendations = [
   ),
 ];
 
-class RecomendationList extends StatelessWidget {
+class RecomendationList extends BaseStatelessWidget {
   const RecomendationList({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 24),
       child: Column(

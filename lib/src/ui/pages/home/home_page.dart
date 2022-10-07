@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:test_exercise/resources/colors.dart';
-import 'package:test_exercise/src/ui/pages/home/components/categories.dart';
 import 'package:test_exercise/src/ui/pages/home/components/bottom_sheet.dart';
+import 'package:test_exercise/src/core/base_widgets/base_statless_widget.dart';
 import 'package:test_exercise/src/ui/pages/home/components/swipe_to_bank_card.dart';
+import 'package:test_exercise/src/ui/pages/home/components/categorie_list_builder.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends BaseStatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return Scaffold(
       body: Container(
         width: double.infinity,

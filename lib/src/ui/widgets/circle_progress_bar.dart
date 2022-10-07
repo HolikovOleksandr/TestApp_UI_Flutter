@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:test_exercise/resources/colors.dart';
 import 'package:test_exercise/resources/fonts.dart';
+import 'package:test_exercise/src/core/base_widgets/base_statless_widget.dart';
 
 // class CircleProgressBar extends CustomPainter {
 //   @override
@@ -22,11 +23,11 @@ import 'package:test_exercise/resources/fonts.dart';
 //   }
 // }
 
-class CircularProgressBar extends StatelessWidget {
+class CircularProgressBar extends BaseStatelessWidget {
   const CircularProgressBar({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return CircularPercentIndicator(
       circularStrokeCap: CircularStrokeCap.round,
       radius: 80,
